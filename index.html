@@ -6,10 +6,16 @@
     <title>Brandon Cooper | Data Portfolio</title>
     <!-- Use Tailwind CSS for rapid, responsive styling -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         /* Optional: Add custom fonts or styles here */
         body {
             font-family: 'Inter', sans-serif;
+            background-color: #1a202c; /* A dark gray background */
+            color: #e2e8f0; /* A light gray text color */
+        }
+        html {
+            scroll-behavior: smooth;
         }
     </style>
 </head>
@@ -18,8 +24,9 @@
 <!-- Header -->
 <header class="bg-gray-900 text-white sticky top-0 z-50 shadow-lg">
     <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
-        <!-- I've added 'lg:text-3xl' here to adjust the font size on smaller screens. -->
+        <!-- I've adjusted the font size for your name to be responsive -->
         <h1 class="text-xl font-bold lg:text-3xl">Brandon Cooper</h1>
+        <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-6">
             <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
             <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
@@ -30,7 +37,7 @@
             ☰
         </button>
     </nav>
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu - This is the dropdown that will be toggled by JavaScript -->
     <div id="mobile-menu" class="hidden md:hidden bg-gray-800 text-center">
         <a href="#about" class="block py-2 hover:bg-gray-700 transition-colors">About</a>
         <a href="#projects" class="block py-2 hover:bg-gray-700 transition-colors">Projects</a>
@@ -38,137 +45,149 @@
     </div>
 </header>
 
-    <main class="container mx-auto p-8">
+<main class="container mx-auto p-8">
 
-        <!-- About Section -->
-        <section id="about" class="text-center py-20">
-            <div class="max-w-3xl mx-auto">
-                <img src="https://github.com/bcoop10/Brandon-Cooper-Portfolio/blob/main/F51FD519-F0D2-44ED-BBB0-AFC16EBE6172_1_201_a.jpeg?raw=true" alt="Brandon Cooper" class="rounded-full w-48 h-48 mx-auto mb-6 border-4 border-cyan-500">
-                <h2 class="text-5xl font-bold text-white mb-4">Hello, I'm Brandon Cooper</h2>
-                <p class="text-xl text-gray-400">
-                    I'm a passionate data professional specializing in <span class="text-cyan-400">data analysis</span>, <span class="text-cyan-400">data visualisation</span>, and <span class="text-cyan-400">reporting</span>. I'm excited to leverage data to solve complex problems and drive business insights.
-                </p>
-                <div class="mt-8 flex justify-center space-x-4">
-                    <a href="https://drive.google.com/file/d/1dnfn4KRpeIARsXb2L94Sx-xEBudePdDT/view?usp=drive_link" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors">
-                        View Resume
-                    </a>
-                    <a href="#projects" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors">
-                        My Projects
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-<section id="projects" class="py-20">
-    <h2 class="text-4xl font-bold text-center mb-12 text-white">Featured Projects</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-        <!-- Project 1: Melbourne Public Transport Usage Analysis -->
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-shadow duration-300">
-            <img src="https://github.com/bcoop10/Brandon-Cooper-Portfolio/blob/main/Patronage%20Map.png?raw=true" alt="Melbourne Public Transport Dashboard" class="w-full h-48 object-cover">
-            <div class="p-6">
-                <!-- PROJECT TITLE -->
-                <h3 class="text-2xl font-bold mb-2 text-white">Melbourne Public Transport Usage Analysis</h3>
-                <!-- DESCRIPTION -->
-                <p class="text-gray-400 mb-4">
-                    This end-to-end case study analyzes metropolitan train station patronage in Melbourne. I uncovered key usage patterns, identified peak times, and derived strategic recommendations for public transport planning and resource allocation.
-                </p>
-                <!-- LINKS -->
-                <div class="flex flex-wrap gap-2 text-sm">
-                    <a href="https://public.tableau.com/app/profile/brandon.cooper1690/viz/MelbourneTrainStationPatronageAnalysisFY23-24/PatronageMap" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
-                        View Dashboard &rarr;
-                    </a>
-                    <a href="https://drive.google.com/file/d/1Wz2an2EWLL7P83M1yf9S0c9vOuZN-WnZ/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
-                        Read Documentation &rarr;
-                    </a>
-                     <a href="https://drive.google.com/file/d/1WtLzCqF14Es9QqxZnsvaXqVsMz3YaedX/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
-                        Read Technical Appendix &rarr;
-                    </a>
-                    <a href="https://drive.google.com/file/d/1RhhJZDNqhLnI8ZcZUQ5oo4ILMpN7LyO8/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
-                        Download .twbx &rarr;
-                    </a>
-                </div>
+    <!-- About Section -->
+    <section id="about" class="text-center py-20">
+        <div class="max-w-3xl mx-auto">
+            <img src="https://github.com/bcoop10/Brandon-Cooper-Portfolio/blob/main/F51FD519-F0D2-44ED-BBB0-AFC16EBE6172_1_201_a.jpeg?raw=true" alt="Brandon Cooper" class="rounded-full w-48 h-48 mx-auto mb-6 border-4 border-cyan-500">
+            <h2 class="text-5xl font-bold text-white mb-4">Hello, I'm Brandon Cooper</h2>
+            <p class="text-xl text-gray-400">
+                I'm a passionate data professional specializing in <span class="text-cyan-400">data analysis</span>, <span class="text-cyan-400">data visualisation</span>, and <span class="text-cyan-400">reporting</span>. I'm excited to leverage data to solve complex problems and drive business insights.
+            </p>
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="https://drive.google.com/file/d/1dnfn4KRpeIARsXb2L94Sx-xEBudePdDT/view?usp=drive_link" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors">
+                    View Resume
+                </a>
+                <a href="#projects" class="bg-gray-700 hover:bg-gray-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-colors">
+                    My Projects
+                </a>
             </div>
         </div>
+    </section>
 
-        <!-- Project 2: Netflix Content Strategy Analysis -->
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-shadow duration-300">
-            <img src="https://github.com/bcoop10/Brandon-Cooper-Portfolio/blob/main/Netflix%20Overview.png?raw=true" alt="Netflix Content Strategy Dashboard" class="w-full h-48 object-cover">
-            <div class="p-6">
-                <!-- PROJECT TITLE -->
-                <h3 class="text-2xl font-bold mb-2 text-white">Netflix Content Strategy Analysis</h3>
-                <!-- DESCRIPTION -->
-                <p class="text-gray-400 mb-4">
-                    Using Tableau, I analyzed Netflix's content library to identify key trends in content genre, popularity, and rating distribution. This project delivered actionable insights to inform a data-driven content strategy.
-                </p>
-                <!-- LINKS -->
-                <div class="flex flex-wrap gap-2 text-sm">
-                    <a href="https://public.tableau.com/app/profile/brandon.cooper1690/viz/NetflixContentStrategyAnalysis/GenreRatingDeepDive" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
-                        View Dashboard &rarr;
-                    </a>
-                    <a href="https://drive.google.com/file/d/1F4AnqYNwU_Oy3KGxz_3AkjrNxtAhccgf/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
-                        Read Documentation &rarr;
-                    </a>
-                    <a href="https://drive.google.com/file/d/1ZzQ8rodEOeGWLfKrRftV849E1SJ-mVMo/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
-                        Download .twbx &rarr;
-                    </a>
-                </div>
-            </div>
-        </div>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <h2 class="text-4xl font-bold text-center mb-12 text-white">Featured Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
 
-        <!-- Project 3: Out-of-Stock & Replenishment Analysis -->
-        <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-shadow duration-300">
-            <img src="https://github.com/bcoop10/Brandon-Cooper-Portfolio/blob/main/OoS%20&%20RM%20Dashboard.png?raw=true" alt="Out-of-Stock Analysis Dashboard" class="w-full h-48 object-cover">
-            <div class="p-6">
-                <!-- PROJECT TITLE -->
-                <h3 class="text-2xl font-bold mb-2 text-white">Out-of-Stock & Replenishment Analysis</h3>
-                <!-- DESCRIPTION -->
-                <p class="text-gray-400 mb-4">
-                    A Tableau-based case study to analyze out-of-stock trends across product categories and regions. I identified key patterns in stock levels and provided data-driven recommendations to improve replenishment efficiency.
-                </p>
-                <!-- LINKS -->
-                <div class="flex flex-wrap gap-2 text-sm">
-                    <a href="https://public.tableau.com/app/profile/brandon.cooper1690/viz/Out-of-StockReplenishmentAnalysis/OoSRMDashboard" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
-                        View Dashboard &rarr;
-                    </a>
-                    <a href="https://drive.google.com/file/d/1b2cERyc_oQHhYB356wx_dxQd2sGJvP2c/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
-                        Read Documentation &rarr;
-                    </a>
-                    <a href="https://drive.google.com/file/d/11UX8AnBcW0oiFwXkGVvcCmak8Zsy41ZY/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
-                        Download .twbx &rarr;
+            <!-- Project 1: Melbourne Public Transport Usage Analysis -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-shadow duration-300">
+                <img src="https://github.com/bcoop10/Brandon-Cooper-Portfolio/blob/main/Patronage%20Map.png?raw=true" alt="Melbourne Public Transport Dashboard" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <!-- PROJECT TITLE -->
+                    <h3 class="text-2xl font-bold mb-2 text-white">Melbourne Public Transport Usage Analysis</h3>
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 mb-4">
+                        This end-to-end case study analyzes metropolitan train station patronage in Melbourne. I uncovered key usage patterns, identified peak times, and derived strategic recommendations for public transport planning and resource allocation.
+                    </p>
+                    <!-- LINKS -->
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <a href="https://public.tableau.com/app/profile/brandon.cooper1690/viz/MelbourneTrainStationPatronageAnalysisFY23-24/PatronageMap" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
+                            View Dashboard &rarr;
+                        </a>
+                        <a href="https://drive.google.com/file/d/1Wz2an2EWLL7P83M1yf9S0c9vOuZN-WnZ/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
+                            Read Documentation &rarr;
+                        </a>
+                        <a href="https://drive.google.com/file/d/1WtLzCqF14Es9QqxZnsvaXqVsMz3YaedX/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
+                            Read Technical Appendix &rarr;
+                        </a>
+                        <a href="https://drive.google.com/file/d/1RhhJZDNqhLnI8ZcZUQ5oo4ILMpN7LyO8/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
+                            Download .twbx &rarr;
                         </a>
                     </div>
                 </div>
-
             </div>
-        </section>
 
-        <!-- Contact Section -->
-        <section id="contact" class="text-center py-20">
-            <h2 class="text-4xl font-bold text-white mb-4">Let's Connect!</h2>
-            <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
-                I'm always open to discussing new opportunities, collaborations, or just talking about data. Feel free to reach out.
-            </p>
-            <div class="flex justify-center space-x-6 text-white text-2xl">
-                <a href="mailto:brandonjcooper016@gmail.com" class="hover:text-cyan-400 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/0035brandon-cooper-081800/" target="_blank" class="hover:text-cyan-400 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
-                </a>
-                <a href="https://github.com/bcoop10" target="_blank" class="hover:text-cyan-400 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.5 0 4-2.5 4-5a4.8 4.8 0 0 0-1.5-3.5c.3-1 .4-2.8.2-3.8-1-.1-2.3.4-3.5 1.5-1.2-.3-2.5-.3-3.8 0-1.2-1.1-2.5-1.6-3.5-1.5-.2 1-.1 2.8.2 3.8A4.8 4.8 0 0 0 4 12c0 2.5.5 5 4 5a4.8 4.8 0 0 0-1 3.5v4"/><path d="M9 18c-3 0-5 3-5 5"/><path d="M15 18c3 0 5 3 5 5"/></svg>
-                </a>
+            <!-- Project 2: Netflix Content Strategy Analysis -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-shadow duration-300">
+                <img src="https://github.com/bcoop10/Brandon-Cooper-Portfolio/blob/main/Netflix%20Overview.png?raw=true" alt="Netflix Content Strategy Dashboard" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <!-- PROJECT TITLE -->
+                    <h3 class="text-2xl font-bold mb-2 text-white">Netflix Content Strategy Analysis</h3>
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 mb-4">
+                        Using Tableau, I analyzed Netflix's content library to identify key trends in content genre, popularity, and rating distribution. This project delivered actionable insights to inform a data-driven content strategy.
+                    </p>
+                    <!-- LINKS -->
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <a href="https://public.tableau.com/app/profile/brandon.cooper1690/viz/NetflixContentStrategyAnalysis/GenreRatingDeepDive" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
+                            View Dashboard &rarr;
+                        </a>
+                        <a href="https://drive.google.com/file/d/1F4AnqYNwU_Oy3KGxz_3AkjrNxtAhccgf/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
+                            Read Documentation &rarr;
+                        </a>
+                        <a href="https://drive.google.com/file/d/1ZzQ8rodEOeGWLfKrRftV849E1SJ-mVMo/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
+                            Download .twbx &rarr;
+                        </a>
+                    </div>
+                </div>
             </div>
-        </section>
 
-    </main>
+            <!-- Project 3: Out-of-Stock & Replenishment Analysis -->
+            <div class="bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/50 transition-shadow duration-300">
+                <img src="https://github.com/bcoop10/Brandon-Cooper-Portfolio/blob/main/OoS%20&%20RM%20Dashboard.png?raw=true" alt="Out-of-Stock Analysis Dashboard" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <!-- PROJECT TITLE -->
+                    <h3 class="text-2xl font-bold mb-2 text-white">Out-of-Stock & Replenishment Analysis</h3>
+                    <!-- DESCRIPTION -->
+                    <p class="text-gray-400 mb-4">
+                        A Tableau-based case study to analyze out-of-stock trends across product categories and regions. I identified key patterns in stock levels and provided data-driven recommendations to improve replenishment efficiency.
+                    </p>
+                    <!-- LINKS -->
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <a href="https://public.tableau.com/app/profile/brandon.cooper1690/viz/Out-of-StockReplenishmentAnalysis/OoSRMDashboard" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
+                            View Dashboard &rarr;
+                        </a>
+                        <a href="https://drive.google.com/file/d/1b2cERyc_oQHhYB356wx_dxQd2sGJvP2c/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
+                            Read Documentation &rarr;
+                        </a>
+                        <a href="https://drive.google.com/file/d/11UX8AnBcW0oiFwXkGVvcCmak8Zsy41ZY/view?usp=drive_link" class="text-cyan-400 hover:text-cyan-500 font-semibold transition-colors">
+                            Download .twbx &rarr;
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-    <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-400 p-6 text-center">
-        <p>&copy; 2025 Brandon Cooper. All rights reserved.</p>
-    </footer>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="text-center py-20">
+        <h2 class="text-4xl font-bold text-white mb-4">Let's Connect!</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-8">
+            I'm always open to discussing new opportunities, collaborations, or just talking about data. Feel free to reach out.
+        </p>
+        <div class="flex justify-center space-x-6 text-white text-2xl">
+            <a href="mailto:brandonjcooper016@gmail.com" class="hover:text-cyan-400 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/0035brandon-cooper-081800/" target="_blank" class="hover:text-cyan-400 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+            <a href="https://github.com/bcoop10" target="_blank" class="hover:text-cyan-400 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-github"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3.5 0 4-2.5 4-5a4.8 4.8 0 0 0-1.5-3.5c.3-1 .4-2.8.2-3.8-1-.1-2.3.4-3.5 1.5-1.2-.3-2.5-.3-3.8 0-1.2-1.1-2.5-1.6-3.5-1.5-.2 1-.1 2.8.2 3.8A4.8 4.8 0 0 0 4 12c0 2.5.5 5 4 5a4.8 4.8 0 0 0-1 3.5v4"/><path d="M9 18c-3 0-5 3-5 5"/><path d="M15 18c3 0 5 3 5 5"/></svg>
+            </a>
+        </div>
+    </section>
+
+</main>
+
+<!-- Footer -->
+<footer class="bg-gray-800 text-gray-400 p-6 text-center">
+    <p>&copy; 2025 Brandon Cooper. All rights reserved.</p>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+    });
+</script>
 
 </body>
 </html>
